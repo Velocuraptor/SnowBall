@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Throver : MonoBehaviour
 {
     [SerializeField] private AudioSource audioThrow = null;
     [SerializeField] private Transform SpawnTransform = null;
-    [SerializeField] private HippoSnowBall snowball = null;
+    [SerializeField] private SnowBall snowball = null;
     [SerializeField] private Scale scale = null;
     [SerializeField] private float AngleInDegrees;
     [SerializeField] private float handicap = 1.2f;
@@ -16,10 +14,10 @@ public class Throver : MonoBehaviour
 
     private void Start()
     {
-        VelocutySettings();
+        VelocitySettings();
     }
 
-    private void VelocutySettings()
+    private void VelocitySettings()
     {
         SpawnTransform.localEulerAngles = new Vector3(-AngleInDegrees, 0f, 0f);
         target.y = SpawnTransform.position.y;
@@ -37,18 +35,14 @@ public class Throver : MonoBehaviour
     {
         if (GameManager.isGame)
         {
-            snowball.gameObject.SetActive(true);
-            snowball.transform.position = transform.position;
-            snowball.minHeight = transform.position.y - 0.6f;
-
+            var newSnowball = Instantiate(snowball, transform.position, Quaternion.identity);
+            newSnowball.minHeight = transform.position.y - 0.6f;
             float newScale = handicap * scale.fill;
-            if (newScale > 1)
+            if (newScale > 1) 
                 newScale = 1;
-
             audioThrow.volume = scale.fill;
             audioThrow.Play();
-
-            snowball.GetComponent<Rigidbody2D>().velocity = SpawnTransform.forward * velocity * newScale;
+            newSnowball.GetComponent<Rigidbody2D>().velocity = SpawnTransform.forward * velocity * newScale;
         }
     }
 

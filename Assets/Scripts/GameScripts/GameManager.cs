@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -14,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private WinGame winWindow = null;
     [SerializeField] private LoseGame loseWindow = null;
     [SerializeField] private PauseGame pauseWindow = null;
-    [SerializeField] private EnemySpawner enemySpawner = null;
+    [SerializeField] private EnemyController enemySpawner = null;
     [SerializeField] private GameObject[] hearts = null;
     [SerializeField] private Text timeText = null;
     [SerializeField] private Text scoreText = null;

@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using Spine.Unity;
 
-public abstract class CharacterAnimation : MonoBehaviour
+public abstract class Character : MonoBehaviour
 {
     [SerializeField] private SkeletonAnimation skeletonAnimation = null;
     [SerializeField] private AnimationReferenceAsset idle = null, run = null;
     private string currantAnimation;
+
+    public abstract void GetDamage();
 
     private void SetAnimation(AnimationReferenceAsset animation, bool loop, float timeScale)
     {

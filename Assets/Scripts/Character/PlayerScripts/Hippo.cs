@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Hippo : CharacterAnimation
+public class Hippo : Character
 {
     [SerializeField] private GameManager gameManager = null;
     [SerializeField] private Rigidbody2D rigidbody2D = null;
@@ -12,7 +12,7 @@ public class Hippo : CharacterAnimation
         startPosition = transform.position;
     }
 
-    internal void GetDamage()
+    public override void GetDamage()
     {
         gameManager.LoseHeart();
     }

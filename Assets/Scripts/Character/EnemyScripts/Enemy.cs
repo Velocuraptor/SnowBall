@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Enemy : CharacterAnimation
+public class Enemy : Character
 {
     [SerializeField] private Transform target = null;
     [SerializeField] private GameManager gameManager = null;
@@ -9,7 +9,7 @@ public class Enemy : CharacterAnimation
     [SerializeField] private float speedSnowball = 10.0f;
     public float speed = 3;
     public int points = 1;
-    public SpawnPosition spawnPosition = null;
+    public EnemySpawnPosition spawnPosition = null;
 
     private int direction = 1;
     private bool isStop = false;
@@ -63,7 +63,7 @@ public class Enemy : CharacterAnimation
         direction *= -1;
     }
     
-    public void GetDamage()
+    public override void GetDamage()
     {
         gameManager.SetScore(points);
         StartCoroutine(DeleyRunWay());
@@ -77,10 +77,8 @@ public class Enemy : CharacterAnimation
 
     public void Throw()
     {
+        var newSnowball = Instantiate(spawnPosition.snowball, transform.position, Quaternion.identity);
         Vector3 fromTo = target.position - transform.position;
-        var snowball = spawnPosition.snowball;
-        snowball.gameObject.SetActive(true);
-        snowball.transform.position = transform.position;
-        snowball.velocity = fromTo * speedSnowball;
+        newSnowball.velocity = fromTo * speedSnowball;
     }
 }

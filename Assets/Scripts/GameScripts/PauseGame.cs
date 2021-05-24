@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PauseGame : Window
 {
-    [SerializeField] private EnemySpawner enemySpawner = null;
+    [SerializeField] private EnemyController enemySpawner = null;
     [SerializeField] private SnowballButton snowballButton = null;
 
     public void Pause()

@@ -1,8 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnPosition : MonoBehaviour
+public class EnemySpawnPosition : MonoBehaviour
 {
     [SerializeField] private Enemy[] enemies = null;
     [SerializeField] private float speed = 0;
@@ -63,7 +62,6 @@ public class SpawnPosition : MonoBehaviour
     public void ResetPosition()
     {
         StopAllCoroutines();
-        snowball.gameObject.SetActive(false);
         enemyActive.gameObject.SetActive(false);
         enemyActive.transform.position = startPosition;
     }

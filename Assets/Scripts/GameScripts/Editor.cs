@@ -7,7 +7,7 @@ public class Editor : MonoBehaviour
     [SerializeField] private Enemy[] enemies = null;
     [SerializeField] private Hippo hippo = null;
     [SerializeField] private GameManager gameManager = null;
-    [SerializeField] private EnemySpawner enemySpawner = null;
+    [SerializeField] private EnemyController enemySpawner = null;
     [SerializeField] private SnowballButton snowballButton = null;
 
     [SerializeField] private InputField inputSpeedEnemy = null;

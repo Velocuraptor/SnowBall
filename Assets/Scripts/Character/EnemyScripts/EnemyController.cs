@@ -1,12 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     [SerializeField] private AudioSource audioThrow = null;
     public float timeReload = 5.0f;
-    public SpawnPosition[] spawnPositions = null;
+    public EnemySpawnPosition[] spawnPositions = null;
 
     public void StartGame()
     {

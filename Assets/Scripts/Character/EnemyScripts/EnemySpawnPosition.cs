@@ -21,7 +21,6 @@ public class EnemySpawnPosition : MonoBehaviour
         enemyActive = enemies[Random.Range(0, 3)];
         enemyActive.gameObject.SetActive(true);
         enemyActive.transform.localScale = Vector3.one;
-        enemyActive.spawnPosition = this;
         StartCoroutine(StartLife());
     }
 

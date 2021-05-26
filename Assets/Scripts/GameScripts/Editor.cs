@@ -6,7 +6,7 @@ public class Editor : MonoBehaviour
 {
     [SerializeField] private Enemy[] enemies = null;
     [SerializeField] private Hippo hippo = null;
-    [SerializeField] private GameManager gameManager = null;
+    [SerializeField] private GameValues gameValues = null;
     [SerializeField] private EnemyController enemySpawner = null;
     [SerializeField] private SnowballButton snowballButton = null;
 
@@ -30,7 +30,7 @@ public class Editor : MonoBehaviour
     {
         standartSpeedEnemy = StartSettings(inputSpeedEnemy,enemies[0].speed);
         standartSpeedHippo = StartSettings(inputSpeedHippo, hippo.speed);
-        standartScoreWin = StartSettings( inputScoreWin, gameManager.scoreWin);
+        standartScoreWin = StartSettings( inputScoreWin, gameValues.scoreWin);
         standartTimeReload = StartSettings(inputTimeReload, snowballButton.timeReaload);
         standartTimeReloadEnemy = StartSettings(inputTimeReloadEnemy, enemySpawner.timeReload);
         for (int i = 0; i < 3; i++)
@@ -46,7 +46,7 @@ public class Editor : MonoBehaviour
             enemies[i].points = (int)CheckInputField(inputEnemyPointsHits[i], standartEnemyPointsHit[i]);
         }
         hippo.speed = CheckInputField(inputSpeedHippo, standartSpeedHippo);
-        gameManager.scoreWin = (int)CheckInputField(inputScoreWin, standartScoreWin);
+        gameValues.scoreWin = (int)CheckInputField(inputScoreWin, standartScoreWin);
         snowballButton.timeReaload = CheckInputField(inputTimeReload, standartTimeReload);
         enemySpawner.timeReload = CheckInputField(inputTimeReloadEnemy, standartTimeReloadEnemy);
 

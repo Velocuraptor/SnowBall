@@ -2,8 +2,8 @@
 
 public class Hippo : Character
 {
-    [SerializeField] private GameManager gameManager = null;
-    [SerializeField] private Rigidbody2D rigidbody2D = null;
+    [SerializeField] private GameValues gameValues = null;
+    [SerializeField] private new Rigidbody2D rigidbody2D = null;
     public float speed = 3;
     private Vector3 startPosition;
 
@@ -14,7 +14,7 @@ public class Hippo : Character
 
     public override void GetDamage()
     {
-        gameManager.LoseHeart();
+        gameValues.LoseHeart();
     }
 
     private void FixedUpdate()

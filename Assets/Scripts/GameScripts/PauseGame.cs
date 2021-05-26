@@ -2,9 +2,6 @@
 
 public class PauseGame : Window
 {
-    [SerializeField] private EnemyController enemySpawner = null;
-    [SerializeField] private SnowballButton snowballButton = null;
-
     public void Pause()
     {
         GameManager.isGame = false;

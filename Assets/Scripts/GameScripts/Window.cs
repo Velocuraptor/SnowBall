@@ -3,12 +3,12 @@
 public abstract class Window : MonoBehaviour
 {
     [SerializeField] private GameObject window = null;
-    [SerializeField] private GameManager gameManager = null;
+    [SerializeField] private WindowController windowController = null;
 
     public void OpenWindow()
     {
         window.SetActive(true);
-        gameManager.SetActivateWindow(this);
+        windowController.SetActivateWindow(this);
     }
 
     public  void CloseWindow()

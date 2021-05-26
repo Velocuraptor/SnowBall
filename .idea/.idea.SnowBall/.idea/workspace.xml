@@ -8,7 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterAnimation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/GameValues.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -17,6 +17,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPosition.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PauseGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/Editor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/EnemyScripts/EnemySpawnPosition.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerScripts/Hippo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/EnemyScripts/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/PauseGame.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/Window.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/WindowController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/GameValues.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qeesFwtMrCARo9f9Kgidwpe2Lj" />
@@ -29,13 +38,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="ReSpellerSettingsId" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -45,6 +55,7 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>

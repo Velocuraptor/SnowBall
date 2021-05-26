@@ -4,12 +4,12 @@ using UnityEngine;
 public class Enemy : Character
 {
     [SerializeField] private Transform target = null;
-    [SerializeField] private GameManager gameManager = null;
-    [SerializeField] private Rigidbody2D rigidbody2D = null;
+    [SerializeField] private GameValues gameValues = null;
+    [SerializeField] private new Rigidbody2D rigidbody2D = null;
     [SerializeField] private float speedSnowball = 10.0f;
     public float speed = 3;
     public int points = 1;
-    public EnemySpawnPosition spawnPosition = null;
+    [SerializeField] private EnemySpawnPosition spawnPosition = null;
 
     private int direction = 1;
     private bool isStop = false;
@@ -65,7 +65,7 @@ public class Enemy : Character
     
     public override void GetDamage()
     {
-        gameManager.SetScore(points);
+        gameValues.SetScore(points);
         StartCoroutine(DeleyRunWay());
     }
 
@@ -77,8 +77,9 @@ public class Enemy : Character
 
     public void Throw()
     {
-        var newSnowball = Instantiate(spawnPosition.snowball, transform.position, Quaternion.identity);
-        Vector3 fromTo = target.position - transform.position;
+        var position = transform.position;
+        var newSnowball = Instantiate(spawnPosition.snowball, position, Quaternion.identity);
+        Vector3 fromTo = target.position - position;
         newSnowball.velocity = fromTo * speedSnowball;
     }
 }
